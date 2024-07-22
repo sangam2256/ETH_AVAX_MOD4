@@ -6,7 +6,7 @@ The Degen Token is an ERC20-compliant token smart contract written in Solidity. 
 - Token Name: Degen Token
 - Token Symbol: DEGEN
 
-## Functionality:
+## Functionality:  
 
 Constructor: The constructor initializes the token with the name "Degen" and symbol "DGN." It also creates an array arr with three predefined positions representing in-game items that players can redeem using their tokens.
 
