@@ -8,8 +8,8 @@ The Degen Token is an ERC-20 compliant token designed for in-game transactions o
 
 ## Contract Details
 
-- **Token Name:** Degen Token
-- **Token Symbol:** DEGEN
+- **Token Name:** Degen
+- **Token Symbol:** DGN
 
 ## Functionality
 
