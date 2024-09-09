@@ -1,42 +1,71 @@
-
 # Degen Token (ERC-20): Unlocking the Future of Gaming
+
+A smart contract implementing the ERC-20 standard for gaming token management on the Ethereum blockchain. Degen Token enables users to transfer, redeem, mint, and burn tokens while interacting with in-game items.
+
 ## Description
-The Degen Token is an ERC20-compliant token smart contract written in Solidity. It allows users to transfer and manage tokens on the Ethereum blockchain. The contract supports functionalities such as transferring tokens, approving token transfers, minting new tokens, redeeming tokens, and burning tokens.
+
+The Degen Token is an ERC-20 compliant token designed for in-game transactions on the Ethereum blockchain. It allows users to transfer tokens between addresses, redeem tokens for in-game items, mint new tokens (by the contract owner), and burn tokens when they are spent. The contract has built-in functionalities for securely managing these operations.
+
 ## Contract Details
-- Token Name: Degen Token
-- Token Symbol: DEGEN
 
-## Functionality:  
+- **Token Name:** Degen Token
+- **Token Symbol:** DEGEN
 
-Constructor: The constructor initializes the token with the name "Degen" and symbol "DGN." It also creates an array arr with three predefined positions representing in-game items that players can redeem using their tokens.
+## Functionality
 
-Redeem Function: Players can redeem in-game items by calling the redeem function. They need to specify the _position parameter to select the desired item to redeem. The function checks if the position exists and the player has a sufficient balance to redeem the item. If the conditions are met, it burns the required amount of tokens, effectively deducting the item's price from the player's balance.
+- **Constructor:** Initializes the token with the name "Degen" and symbol "DGN". Sets up an array of in-game items that can be redeemed using tokens.
 
-Transfer Function: The transfer function allows players to transfer their tokens to other addresses. Players need to specify the _beneficiery address and the __price (amount) of tokens they want to transfer. The function checks if the price is greater than zero and transfers the tokens if the sender has enough balance.
+- **Redeem Function:** Players can redeem in-game items by providing a `_position` corresponding to the item. The contract checks if the item exists and whether the player has enough tokens to redeem it. If valid, it burns the required tokens from the player’s balance.
 
-Mint Function: The mint function is reserved for the contract owner (presumably the Degen Gaming platform administrator). It enables the owner to mint new tokens and distribute them to designated beneficiaries. The owner can call this function, specifying the _beneficiery address and the __price (amount) of tokens to mint.
+- **Transfer Function:** Allows users to transfer tokens to other addresses by specifying the `_beneficiary` and `__price` (amount). The function checks the sender's balance before transferring the specified amount.
 
-### Network Setup
+- **Mint Function:** Reserved for the contract owner. The owner can mint new tokens and distribute them to specified `_beneficiary` addresses.
 
-Fuji Testnet Settings:
+## Getting Started
 
-  Network Name: ```Avalanche Fuji C-Chain```
+### Installing
 
-  New RPC URL: ```https://api.avax-test.network/ext/bc/C/rpc```
+* Use Remix IDE to deploy the contract.
+* Make sure to connect your MetaMask wallet with the Avalanche Fuji testnet.
 
-  ChainID: ```43113```
+### Executing program
 
-  Symbol: ```AVAX```
-
-  Explorer: ```https://testnet.snowtrace.io/```
-
-### Executing program and Deployment
-1. Connect Remix IDE with MetaMask Wallet by changing environment to Inject provider.
-2. Deploy the contract in the Avalanche network
-3. Get the API key from ```snowtracer.io```
-4. Get the contract verified. You'd need Contract address, compiler versoin, API key and contract name.
+1. **Connect to Remix IDE**  
+   Use [Remix IDE](https://remix.ethereum.org/) and connect with MetaMask.
    
-5.Players can then start interacting with the contract using the functions provided - transfer, redeem, and checkBalance - to participate in Degen Gaming and earn rewards.
-## Author:
+2. **Network Setup**  
+   Configure MetaMask to use the Fuji testnet:  
+   - Network Name: `Avalanche Fuji C-Chain`
+   - RPC URL: `https://api.avax-test.network/ext/bc/C/rpc`
+   - ChainID: `43113`
+   - Symbol: `AVAX`
+   - Explorer: `https://testnet.snowtrace.io/`
 
-The DegenToken smart contract provided in this README is based on the starter template project and created by me.
+3. **Deploy the contract:**
+   - Change Remix environment to Injected Web3.
+   - Compile and deploy the contract using the Avalanche network.
+
+4. **Verify the contract:**
+   - Get the API key from [snowtrace.io](https://testnet.snowtrace.io/).
+   - Verify the contract using the contract address, compiler version, API key, and contract name.
+
+5. **Interact with the contract:**
+   - Transfer tokens, redeem items, mint tokens, or check the balance using available functions.
+
+## Help
+
+If any issues occur, verify network settings and the contract deployment process.
+
+```
+Check Remix IDE console for errors during deployment
+```
+
+## Author
+
+The Degen Token smart contract is created by Sangam kumar.
+CHANDIGARH UNIVERSITY
+
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
